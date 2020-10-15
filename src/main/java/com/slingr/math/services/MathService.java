@@ -19,11 +19,15 @@ public class MathService {
             Double result = e.calculate();
 
             if(precision >= 0){
-                Double roundedResult = new BigDecimal(result).round(new MathContext(precision)).doubleValue();
-                return roundedResult.toString();
+                result = new BigDecimal(result).round(new MathContext(precision)).doubleValue();
+                //return roundedResult.toString();
             } else {
-                return result.toString();
+                //return result.toString();
             }
+
+            String finalResult = result.toString().endsWith(".0") ? truncateDecimal(result.toString()) : result.toString();
+
+            return finalResult;
 
         } catch (Exception e) {
             throw new Exception(e.getMessage());
@@ -37,6 +41,10 @@ public class MathService {
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         }
+    }
+
+    public String truncateDecimal(String result) {
+        return result.substring(0, result.indexOf(".0"));
     }
 
 }
