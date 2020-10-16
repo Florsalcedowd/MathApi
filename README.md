@@ -1,6 +1,8 @@
 # MathApi
 This is a RESTful API that allows to solve math expressions through GET and POST requests. So given a math expression a number is returned as response. Built with Java (Spring Boot + Maven)
 
+https://slingr-challenge.herokuapp.com
+
 ##### Language
 Java
 
@@ -53,11 +55,11 @@ precision | 	number of significant digits in formatted output. It's 0 by default
 ```
 #### Examples
 
-https://slingr-challenge.herokuapp.com/api/math?expression=4%5E2*25%2Bsqrt(9)
-https://slingr-challenge.herokuapp.com/api/math?expression=2*(7-3)
-https://slingr-challenge.herokuapp.com/api/math?expression=1.2*(2%2B4.5)*4.321&precision=5
-https://slingr-challenge.herokuapp.com/api/math?expression=2%2B3*sqrt(4)
-https://slingr-challenge.herokuapp.com/api/math?expression=15.52/7&precision=3
+- https://slingr-challenge.herokuapp.com/api/math?expression=4%5E2*25%2Bsqrt(9)
+- https://slingr-challenge.herokuapp.com/api/math?expression=2*(7-3)
+- https://slingr-challenge.herokuapp.com/api/math?expression=1.2*(2%2B4.5)*4.321&precision=5
+- https://slingr-challenge.herokuapp.com/api/math?expression=2%2B3*sqrt(4)
+- https://slingr-challenge.herokuapp.com/api/math?expression=15.52/7&precision=3
 
 ### POST Request
 
