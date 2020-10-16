@@ -20,6 +20,9 @@ Maven
 ##### Hosting platform
 Heroku
 
+##### Documentation
+Swagger (http://slingr-challenge.herokuapp.com/swagger-ui.html)
+
 ## Supported Expressions
 
 | Operation | Symbol | Example |
