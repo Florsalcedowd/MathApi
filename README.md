@@ -1,16 +1,42 @@
 # MathApi
 This is a RESTful API that allows to solve math expressions through GET and POST requests. So given a math expression a number is returned as response. Built with Java (Spring Boot + Maven)
-### Libraries used
 
-- [mXparser](http://mathparser.org/) (check supported expressions)
+##### Language
+Java
+
+##### Framework
+Spring Boot
+
+##### Build Tool
+Maven
+
+##### Libraries
+
+- [mXparser](http://mathparser.org/) 
 - [Lombok](https://projectlombok.org/)
+
+##### Hosting platform
+Heroku
+
+## Supported Expressions
+
+| Operation | Symbol | Example |
+| ----------- | ----------- | ----------- |
+| Addition | + (use %2B for request param) | `4+4`
+| Subtraction | - | `2-4`
+| Multiplication | * | `4*8`
+| Division | / | `4/2`
+| Power | ^ (use %5E for request param) | `3^6`
+| Square root | sqrt() | `sqrt(5)`
+| Percentage | % (use %25 for request param | `100 * 10%`
+| Using parentheses | () | `(-4+2)*5 - ((4*2/3) + sqrt(25))`
 
 ## Usage
 
 ### GET Request
 
 ```
-GET http://localhost:9000/api/math
+GET https://slingr-challenge.herokuapp.com/api/math
 ```
 
 #### Request Params
@@ -27,16 +53,16 @@ precision | 	number of significant digits in formatted output. It's 0 by default
 ```
 #### Examples
 
-http://localhost:9000/api/math?expression=4%5E2*25%2Bsqrt(9)
-http://localhost:9000/api/math?expression=2*(7-3)
-http://localhost:9000/api/math?expression=1.2*(2%2B4.5)*4.321&precision=5
-http://localhost:9000/api/math?expression=2%2B3*sqrt(4)
-http://localhost:9000/api/math?expression=15.52/7&precision=3
+https://slingr-challenge.herokuapp.com/api/math?expression=4%5E2*25%2Bsqrt(9)
+https://slingr-challenge.herokuapp.com/api/math?expression=2*(7-3)
+https://slingr-challenge.herokuapp.com/api/math?expression=1.2*(2%2B4.5)*4.321&precision=5
+https://slingr-challenge.herokuapp.com/api/math?expression=2%2B3*sqrt(4)
+https://slingr-challenge.herokuapp.com/api/math?expression=15.52/7&precision=3
 
 ### POST Request
 
 ```
-POST http://localhost:9000/api/math
+POST https://slingr-challenge.herokuapp.com/api/math
 ```
 
 #### Request Body
