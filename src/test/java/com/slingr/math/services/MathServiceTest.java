@@ -38,8 +38,14 @@ class MathServiceTest {
     }
 
     @Test
-    void truncateDecimal() {
+    void truncateDecimalTrue() {
         String response = mathService.truncateDecimal("8.0");
         assertEquals("8", response);
+    }
+
+    @Test
+    void truncateDecimalFalse() {
+        String response = mathService.truncateDecimal("8.0456");
+        assertEquals("8.0456", response);
     }
 }
